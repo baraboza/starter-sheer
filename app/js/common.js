@@ -34,5 +34,15 @@ $('.tabs__list li').click(function(event) {
 	$(selectTab).fadeIn();
 });
 
+$('.scroll-top').click(function() {
+	$('html, body').animate({scrollTop: 0}, 1000);
+});
+
+$('.scroll-link').click(function(e) {
+	e.preventDefault();
+	$('html, body').animate({
+		scrollTop: $( $(this).attr('href') ).offset().top
+	}, 1000);
+});
 
 });

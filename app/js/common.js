@@ -34,6 +34,14 @@ $('.tabs__list li').click(function(event) {
 	$(selectTab).fadeIn();
 });
 
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 0) {
+		$('.scroll-top').fadeIn(200);
+	} else {
+		$('.scroll-top').fadeOut(200);
+	}
+});
+
 $('.scroll-top').click(function() {
 	$('html, body').animate({scrollTop: 0}, 1000);
 });
